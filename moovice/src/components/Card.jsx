@@ -1,4 +1,5 @@
 import React from 'react';
+import '../App.css';
 
 class Card extends React.Component {
     render() {
@@ -8,15 +9,14 @@ class Card extends React.Component {
         return (
             <>
                 <div className="container">
-                    <div className="row">
-                        <div className="col-md-8">{film.title}</div>
-                        <div className="col-4 col-md-4">{film.release_date}</div>
+                    <div className="row contour">
+                        <div className="col-lg-4 "><img src={url} /></div>
+                        <div className="col-lg-4"><h4>{film.title}</h4>  {film.release_date}</div>
+                        <div className="col-lg-4">{film.overview}</div>
                     </div>
-                    <div className="row">
-                        <div className="col-6 col-md-4"><img src={url} /></div>
-                        <div className="col-6 col-md-4">{film.overview}</div>
-                    </div>
+
                 </div>
+
 
             </>
         )
