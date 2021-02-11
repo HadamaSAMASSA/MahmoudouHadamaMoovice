@@ -2,6 +2,10 @@ import React from 'react';
 import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 import './App.css';
 import Popular from './components/Popular';
+import PopularBattle from './components/Popular-battle';
+import Weekly from './components/Weekly';
+import WeeklyBattle from './components/Weekly-battle';
+import Favorites from './components/Favorites';
 
 class App extends React.Component {
 
@@ -12,23 +16,28 @@ class App extends React.Component {
       <BrowserRouter>
         <div>
           <nav>
-            <ul>
-              <li> <Link to="/"><h1>Home</h1></Link></li>
-              <li><Link to="/weekly"><h1>Weekly</h1></Link></li>
-              <li><Link to="/weekly-battle"><h1>WeklyBattle</h1></Link></li>
-              <li><Link to="/popular"><h1>Popular</h1></Link></li>
-              <li><Link to="/popular-battle "><h1>PopularBattle</h1></Link></li>
-              <li><Link to="/favorites"><h1>Favorites</h1></Link></li>
-            </ul>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <div class="container">
+                <h1>Moovice</h1>
+                <Link to="/weekly"><p>Weekly</p></Link>
+                <Link to="/weekly-battle"><p>WeklyBattle</p></Link>
+                <Link to="/popular"><p>Popular</p></Link>
+                <Link to="/popular-battle "><p>PopularBattle</p></Link>
+                <Link to="/favorites"><p>Favorites</p></Link>
+              </div>
+            </nav>
+
+
+         
           </nav>
 
           <Switch>
-            <Route path="/" component={App} />
-            <Route path="/weekly" component={App} />
-            <Route path="/weekly-battle" component={App} />
-            <Route path="/popular" component={App} />
-            <Route path="/popular-battle " component={App} />
-            <Route path="/favorites" component={App} />
+            <Route path="/" />
+            <Route path="/weekly" component={Weekly} />
+            <Route path="/weekly-battle" component={WeeklyBattle} />
+            <Route path="/popular" component={Popular} />
+            <Route path="/popular-battle " component={PopularBattle} />
+            <Route path="/favorites" component={Favorites} />
           </Switch>
         </div>
       </BrowserRouter>
