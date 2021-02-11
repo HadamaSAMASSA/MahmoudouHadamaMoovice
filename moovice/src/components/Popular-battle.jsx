@@ -34,7 +34,6 @@ class PopularBattle extends React.Component {
                     return <p  key={index}>   <Card film={movie} />   </p> 
                 }
                 )}
-
             </div>
         )
     }
