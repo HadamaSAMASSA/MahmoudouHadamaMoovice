@@ -7,7 +7,7 @@ class WeeklyBattle extends React.Component {
     render(){
         return(
             <div>
-                
+                 <p>Bonjour weeklybattle</p>
             </div>
         )
     }

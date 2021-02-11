@@ -6,40 +6,38 @@ import PopularBattle from './components/Popular-battle';
 import Weekly from './components/Weekly';
 import WeeklyBattle from './components/Weekly-battle';
 import Favorites from './components/Favorites';
+import Home from './components/Home';
 
 class App extends React.Component {
 
   render() {
     return (
 
-
       <BrowserRouter>
-        <div>
+        
           <nav>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
               <div class="container">
                 <h1>Moovice</h1>
-                <Link to="/weekly"><p>Weekly</p></Link>
-                <Link to="/weekly-battle"><p>WeklyBattle</p></Link>
-                <Link to="/popular"><p>Popular</p></Link>
-                <Link to="/popular-battle "><p>PopularBattle</p></Link>
-                <Link to="/favorites"><p>Favorites</p></Link>
+                <Link to="/Home"><p>Home</p></Link>
+                <Link to="/Weekly"><p>Weekly</p></Link>
+                <Link to="/Weekly-battle"><p>WeeklyBattle</p></Link>
+                <Link to="/Popular"><p>Popular</p></Link>
+                <Link to="/Popular-battle "><p>PopularBattle</p></Link>
+                <Link to="/Favorites"><p>Favorites</p></Link>
               </div>
             </nav>
-
-
-         
           </nav>
 
           <Switch>
-            <Route path="/" />
-            <Route path="/weekly" component={Weekly} />
-            <Route path="/weekly-battle" component={WeeklyBattle} />
-            <Route path="/popular" component={Popular} />
-            <Route path="/popular-battle " component={PopularBattle} />
-            <Route path="/favorites" component={Favorites} />
+            <Route path="/Home" component={Home}/>
+            <Route path="/Weekly" component={Weekly} />
+            <Route path="/Weekly-battle" component={WeeklyBattle} />
+            <Route path="/Popular" component={Popular} />
+            <Route path="/Popular-battle " component={PopularBattle} />
+            <Route path="/Favorites" component={Favorites} />
           </Switch>
-        </div>
+        
       </BrowserRouter>
 
     );

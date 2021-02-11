@@ -1,17 +1,17 @@
 import React from 'react';
 
-class Weekly extends React.Component {
+class Home extends React.Component {
     
     
 
     render(){
         return(
             <div>
-                 <p>Bonjour weekly</p>
+                 <p>Bonjour Home</p>
             </div>
         )
     }
 
 }
      
-export default Weekly
+export default Home

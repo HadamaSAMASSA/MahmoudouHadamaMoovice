@@ -7,7 +7,7 @@ class Favorites extends React.Component {
     render(){
         return(
             <div>
-                
+                <p>Bonjour favori</p>
             </div>
         )
     }
